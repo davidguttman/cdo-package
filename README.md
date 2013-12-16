@@ -5,7 +5,9 @@ Alphabetizes your dependencies
 
 ## Usage ##
 
-    cdo-package [./package.json] > package.json
+Run this from a directory with a `package.json` file:
+
+    cdo-package
 
 ## Installation ##
 
