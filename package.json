@@ -1,0 +1,28 @@
+{
+  "name": "cdo-package",
+  "version": "0.0.0",
+  "description": "Alphabetizes the dependencies in package.json",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/davidguttman/cdo-package.git"
+  },
+  "keywords": [
+    "package.json",
+    "ocd",
+    "cdo"
+  ],
+  "author": "David Guttman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/davidguttman/cdo-package/issues"
+  },
+  "homepage": "https://github.com/davidguttman/cdo-package",
+  "bin": "bin/cdo-package"
+}

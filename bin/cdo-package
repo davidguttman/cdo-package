@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+var fs = require('fs')
+
+var cdo = require('..')
+
+var filename = process.argv[2] || 'package.json'
+
+var pkg = JSON.parse(fs.readFileSync(filename))
+var pkgSorted = cdo(pkg)
+
+var str = JSON.stringify(pkgSorted, null, 2)
+
+console.log(str)

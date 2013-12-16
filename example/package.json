@@ -1,0 +1,46 @@
+{
+  "name": "example",
+  "version": "0.0.0",
+  "description": "example",
+  "main": "index.js",
+  "dependencies": {
+    "request": "~2.27.0",
+    "connect-redis": "~1.4.5",
+    "moment": "~1.7.2",
+    "ejs": "~0.8.3",
+    "coffee-script": "~1.6.3",
+    "connect-health-check": "~0.2.0",
+    "dom-events": "~0.1.1",
+    "persona-id": "~0.1.0",
+    "hyperquest": "~0.1.7",
+    "mongo-collection": "0.1.1",
+    "async": "~0.1.18",
+    "express": "~3.4.0",
+    "post-json": "~0.2.0",
+    "event-stream": "~3.0.16",
+    "get-json-hq": "~0.1.0",
+    "domquery": "~1.0.1",
+    "node-uuid": "~1.4.1",
+    "director": "~1.2.0",
+    "pikaday": "~1.2.0",
+    "put-json": "~0.1.0",
+    "browserify-xcharts": "~0.3.3"
+  },  
+  "scripts": {
+    "start": "npm run build && node index.js",
+    "watch-client": "watchify lib/client/entry.coffee -o public/main.js -dv",
+    "watch-server": "supervisor -n exit -i public,lib/client -e js,coffee index",
+    "build": "browserify lib/client/entry.coffee | uglifyjs -mc > public/main.js",
+    "dev": "npm run watch-client & npm run watch-server"
+  },
+  "author": "David Guttman",
+  "license": "BSD",
+  "optionalDependencies": {},
+  "browserify": {
+    "transform": [
+      "coffeeify",
+      "sassify",
+      "simple-jadeify"
+    ]
+  }
+}
