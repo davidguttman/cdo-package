@@ -7,7 +7,7 @@ Alphabetizes your dependencies
 
 Run this from a directory with a `package.json` file:
 
-    cdo-package
+    cdo-package [spaces]
 
 ## Installation ##
 
