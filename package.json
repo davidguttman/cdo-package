@@ -1,6 +1,6 @@
 {
   "name": "cdo-package",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Alphabetizes the dependencies in package.json",
   "main": "index.js",
   "directories": {
