@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+var args = process.argv.slice(2,3)
+var spaces = args && parseInt(args[0], 10) || 2
+
 var fs = require('fs')
 
 var cdo = require('..')
@@ -8,6 +11,6 @@ var filename = './package.json'
 var pkg = JSON.parse(fs.readFileSync(filename))
 var pkgSorted = cdo(pkg)
 
-var str = JSON.stringify(pkgSorted, null, 2)
+var str = JSON.stringify(pkgSorted, null, spaces)
 
 fs.createWriteStream(filename).end(str)
